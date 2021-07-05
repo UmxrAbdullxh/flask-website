@@ -1,0 +1,29 @@
+{% extends 'base.html' %} 
+{% block title %} 
+Owned Items
+{% endblock %} 
+{% block body %} 
+<h2>Owned Items</h2>
+<div>
+    <table class="table">
+        <thead>
+          <tr>
+            <th scope="col">ID</th>
+            <th scope="col">Name</th>
+            <th scope="col">Barcode</th>
+            <th scope="col">Price</th>
+          </tr>
+        </thead>
+        {% for owned_item in owned_items %}
+        <tr>
+            <th scope="row">{{owned_item.id}}</th>
+            <th scope="row">{{owned_item.name}}</th>
+            <th scope="row">{{owned_item.barcode}}</th>
+            <th scope="row">{{owned_item.price}}$</th>
+            <th scope="row">
+            </th>
+        {% endfor %}
+        </tr>
+    </tbody>
+</div>
+{% endblock %} 

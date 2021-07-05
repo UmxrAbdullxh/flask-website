@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+{% block title %}
+Home Page
+{% endblock %} 
+{% block body %} 
+<!-- Showcase and Nav -->
+
+<style>
+  #showcase{
+    background-image: url("{{url_for('static', filename='img/showcase.jpeg')}}");
+}
+</style>
+<div id="showcase">
+  <div class="section-main container">
+    <h1>myMarket</h1>
+    <h2>Your music, movies, and TV shows take center stage.</h2>
+    <a class="btn btn-outline-dark" href="{{url_for('market')}}" role="button">Get Started</a>
+  </div>
+</div>
+{% endblock %}
